@@ -3576,6 +3576,8 @@ section {
 
 /* Success state — icon + message, centred */
 .start-form-success {
+  position: relative;
+  isolation: isolate;
   padding: 48px;
   display: flex;
   flex-direction: column;
@@ -3584,6 +3586,25 @@ section {
 }
 .start-form-success[hidden] { display: none; }
 @media (max-width: 720px) { .start-form-success { padding: 40px 24px; } }
+
+/* Stretched background glow behind the icon — bleeds to the top and side
+   edges of the dialog (clipped by its rounded corners) so there's no dark
+   padding gap framing the glow. */
+.start-form-success::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: -60px;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 360px;
+  background: radial-gradient(50% 50% at 50% 50%,
+    rgba(2, 145, 97, 0.55) 0%,
+    rgba(2, 145, 97, 0) 70%);
+  filter: blur(20px);
+  pointer-events: none;
+}
 
 .start-form-success-icon-wrap {
   position: relative;
