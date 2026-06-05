@@ -3368,9 +3368,10 @@ section {
 
 .footer-brand .brand { margin-bottom: 20px; }
 .footer-brand p {
-  font-size: 14px;
-  color: var(--body);
-  line-height: 1.55;
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
   max-width: 320px;
 }
 
@@ -3385,17 +3386,20 @@ section {
 
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
 .footer-col a {
-  color: var(--body);
+  color: var(--muted);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
   transition: color .15s;
 }
 .footer-col a:hover { color: var(--ink); }
 
 .footer-col--requisites ul li {
-  font-size: 14px;
-  color: var(--body);
+  font-size: 16px;
+  color: var(--muted);
   line-height: 1.5;
+  letter-spacing: -0.02em;
 }
 
 .footer-bottom {
@@ -3404,7 +3408,9 @@ section {
   align-items: center;
   padding-top: 32px;
   border-top: 1px solid var(--hairline);
-  font-size: 13px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
   color: var(--muted);
   flex-wrap: wrap;
   gap: 16px;
