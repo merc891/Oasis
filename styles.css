@@ -3326,6 +3326,9 @@ section {
    Footer
    ============================================================ */
 
+/* Last section before footer: gap to footer = footer padding-top (160px) */
+#cta { padding-bottom: 0; }
+
 .footer {
   padding: 160px 0 32px;
 }
