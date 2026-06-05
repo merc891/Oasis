@@ -3250,14 +3250,15 @@ section {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  /* Let taps on the empty area of the bar pass through to the content behind
-     (e.g. the carousel arrows it may overlap on mobile). Only the explicit
-     controls below stay interactive, so a stray tap never opens the policy. */
-  pointer-events: none;
 }
 
-.cookie-notice .btn,
-.cookie-notice-link { pointer-events: auto; }
+/* .cookie-notice has display:flex, which has the same specificity as the
+   default [hidden]{display:none} but is declared later, so it would win and
+   leave the dismissed notice invisibly in the layout (opacity:0) where it
+   keeps intercepting taps on the carousel arrows behind it. Make "hidden"
+   actually remove it — same guard already used for .start-form-success and
+   .modal above. */
+.cookie-notice[hidden] { display: none; }
 
 .cookie-notice.is-visible {
   opacity: 1;
