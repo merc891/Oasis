@@ -478,6 +478,9 @@ section {
 }
 
 @media (max-width: 768px) {
+  /* On mobile the hero background spans the full screen width. */
+  .hero-bg img { width: 100%; }
+
   .hero-cta {
     flex-wrap: nowrap;
     /* .hero-inner is a centered flex column, so the row would otherwise
