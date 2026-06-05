@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="styles.css?v=210" />
+  <link rel="stylesheet" href="styles.css?v=211" />
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/favicon-180.png" />
@@ -109,7 +109,7 @@
     <div class="container">
       <div class="s-head reveal">
         <span class="eyebrow">Проблемы публичных VPN</span>
-        <h2 class="display-lg">Нестабильность, риски<br />и серая зона</h2>
+        <h2 class="display-lg">Нестабильность,<br class="br-mob" /> риски<br class="br-desk" /> и серая зона</h2>
       </div>
 
       <div class="problem-cards">
@@ -1119,15 +1119,8 @@
         }
       };
 
-      const go = (next) => {
-        if (isTransitioning) return;
-        isTransitioning = true;
-        index = next;
-        apply(true);
-      };
-
-      track.addEventListener('transitionend', (e) => {
-        if (e.propertyName !== 'transform') return;
+      let settleTimer;
+      const settle = () => {
         if (index >= cloneCount + N) {
           index -= N;
           apply(false);
@@ -1136,6 +1129,25 @@
           apply(false);
         }
         isTransitioning = false;
+      };
+
+      const go = (next) => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        index = next;
+        apply(true);
+        // Self-healing fallback: if transitionend never fires (interrupted
+        // transition, backgrounded tab, equal start/end value on touch
+        // devices) the carousel must not stay deadlocked with arrows/swipe
+        // permanently disabled. Settle after the transition duration + buffer.
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(settle, 700);
+      };
+
+      track.addEventListener('transitionend', (e) => {
+        if (e.propertyName !== 'transform') return;
+        clearTimeout(settleTimer);
+        settle();
       });
 
       const resetProgress = () => {
