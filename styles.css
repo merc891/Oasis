@@ -3250,7 +3250,14 @@ section {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  /* Let taps on the empty area of the bar pass through to the content behind
+     (e.g. the carousel arrows it may overlap on mobile). Only the explicit
+     controls below stay interactive, so a stray tap never opens the policy. */
+  pointer-events: none;
 }
+
+.cookie-notice .btn,
+.cookie-notice-link { pointer-events: auto; }
 
 .cookie-notice.is-visible {
   opacity: 1;
@@ -3289,7 +3296,10 @@ section {
     left: 16px;
     bottom: 16px;
     width: auto;
+    gap: 14px;
+    padding: 16px;
   }
+  .cookie-notice-text { font-size: 13px; }
 }
 
 @media (max-width: 520px) {
