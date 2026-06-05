@@ -1,0 +1,1615 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Oasis network — управляемая корпоративная инфраструктура вместо разрозненных VPN</title>
+  <meta name="description" content="KRVO (Kernel Routing Virtual Overlay) — централизованная виртуальная инфраструктура маршрутизации для российских компаний. Стабильный и безопасный доступ к рабочим инструментам и международным сервисам." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css?v=210" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon-180.png" />
+  <meta name="theme-color" content="#030408" />
+</head>
+<body>
+
+  <!-- ============== NAV ============== -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <img src="logo.svg" alt="KRVO" width="180" />
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#problem">Проблема</a></li>
+          <li><a href="#solution">Решение</a></li>
+          <li><a href="#architecture">Архитектура</a></li>
+          <li><a href="#access">Управление</a></li>
+          <li><a href="#pricing">Стоимость</a></li>
+          <li><a href="#testimonials">Отзывы</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="#cta" class="btn btn-primary">Подключить</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero">
+    <!-- Background texture — same as the pricing block, pinned top-left -->
+    <div class="hero-bg">
+      <img src="assets/bg-left.jpg" alt="" role="presentation" />
+    </div>
+    <div class="container hero-inner">
+      <span class="eyebrow hero-eyebrow">виртуальная инфраструктура маршрутизации</span>
+      <h1 class="display-xl">
+Единая управляемая инфраструктура вместо разрозненных VPN
+      </h1>
+      <p class="hero-sub">
+        Стабильный и безопасный доступ к рабочим инструментам<br class="desktop-only" />и международным сервисам для всей команды
+      </p>
+      <div class="hero-cta">
+        <a href="#cta" class="btn btn-primary btn-lg">Подключить</a>
+        <a href="#cta" class="btn btn-ghost btn-lg">Получить консультацию</a>
+      </div>
+    </div>
+
+    <div class="stat-band">
+      <div class="container">
+        <div class="stat-strip">
+          <div class="stat-cell">
+            <div class="stat-value">490<span class="unit">₽</span></div>
+            <div class="stat-label">за устройство в месяц</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-value">2<span class="unit">дня</span></div>
+            <div class="stat-label">от договора до запуска</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-value">3<span class="unit">протокола</span></div>
+            <div class="stat-label">WireGuard · OpenVPN · IPsec</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-value">15<span class="unit">устройств</span></div>
+            <div class="stat-label">мин. объем подключения</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============== PROBLEM — TABS ============== -->
+  <section id="problem" class="reveal" data-reveal-offset="100">
+    <div class="container">
+      <div class="s-head reveal">
+        <span class="eyebrow">Проблемы публичных VPN</span>
+        <h2 class="display-lg">Нестабильность, риски<br />и серая зона</h2>
+      </div>
+
+      <div class="problem-cards">
+        <div class="problem-card">
+          <div class="problem-card-tag">
+            <span class="dot"></span>
+            <span class="num">01</span>
+          </div>
+          <h3>Нестабильность</h3>
+          <p>VPN-сервисы работают нестабильно. Сотрудники постоянно переключаются между ними вместо работы</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-card-tag">
+            <span class="dot"></span>
+            <span class="num">02</span>
+          </div>
+          <h3>Риски безопасности</h3>
+          <p>Трафик проходит через чужую инфраструктуру. Пароли, документы и&nbsp;конфиденциальные данные могут попасть к&nbsp;третьим лицам</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-card-tag">
+            <span class="dot"></span>
+            <span class="num">03</span>
+          </div>
+          <h3>Серая зона</h3>
+          <p>Использование публичных VPN создаёт юридические риски. Возможны ограничения, проверки и&nbsp;штрафы</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== REGULATION ============== -->
+  <section class="regulation-section">
+    <div class="container">
+      <div class="s-head reveal">
+        <span class="eyebrow">Регулирование ужесточается</span>
+        <h2 class="display-lg">Ситуация ухудшается<br />и ограничения продолжают усиливаться</h2>
+      </div>
+
+      <div class="reg-cards">
+        <div class="reg-card">
+          <div class="reg-card-head">
+            <div class="reg-card-stamp">15 АПРЕЛЯ 2026</div>
+            <span class="reg-card-dot" aria-hidden="true"></span>
+          </div>
+          <h3>Сбер, Яндекс, Wildberries, Ozon и ещё 20+ платформ начали закрывать доступ пользователям с VPN</h3>
+          <p>469 публичных VPN-сервисов уже заблокированы Роскомнадзором</p>
+        </div>
+
+        <div class="reg-card">
+          <div class="reg-card-head">
+            <div class="reg-card-stamp">Ближайшее будущее</div>
+            <span class="reg-card-dot" aria-hidden="true"></span>
+          </div>
+          <h3>Рассматривается закон, по которому бесплатно будут доступны только 15 ГБ зарубежного трафика. За остальной объём придётся платить</h3>
+          <p>Перерасход будет даже у тех, кто не заходит на зарубежные сайты — российские приложения подгружают зарубежный контент</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CENTRALIZED ACCESS — BANNER ============== -->
+  <section class="banner reveal" id="solution" data-reveal-offset="100">
+    <div class="banner-bg">
+      <img src="bg-band.jpg" alt="" role="presentation" />
+    </div>
+    <div class="container">
+      <div class="banner-inner">
+        <span class="eyebrow">Централизованный доступ</span>
+        <h2 class="display-lg">Система вместо&nbsp;хаоса<br />из бесконтрольных VPN</h2>
+      </div>
+      <div class="preview">
+        <div class="chrome">
+          <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+          <span class="addr">dashboard</span>
+          <span class="meta">● 12 подключено · 0.4 ms</span>
+        </div>
+        <div class="panel">
+          <svg width="1200" height="420" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <rect x="220" y="0" width="980" height="420" fill="#151515"/>
+            <rect x="0" y="0" width="220" height="420" fill="#0c0c0c"/>
+            <rect x="0" y="0" width="220" height="420" fill="none" stroke="#1f1f1f"/>
+            <text x="24" y="38" font-family="Geist" font-size="11" font-weight="500" letter-spacing="1.5" fill="#898989">OASIS NETWORK</text>
+            <rect x="16" y="64" width="188" height="36" rx="4" fill="#161616"/>
+            <text x="32" y="86" font-family="Geist" font-size="13" font-weight="500" fill="#fff">Обзор</text>
+            <text x="32" y="124" font-family="Geist" font-size="13" fill="#a3a3a3">Сотрудники</text>
+            <text x="32" y="156" font-family="Geist" font-size="13" fill="#a3a3a3">Маршрутизация</text>
+            <text x="32" y="188" font-family="Geist" font-size="13" fill="#a3a3a3">События</text>
+            <text x="32" y="220" font-family="Geist" font-size="13" fill="#a3a3a3">Настройки</text>
+            <text x="32" y="252" font-family="Geist" font-size="13" fill="#a3a3a3">Биллинг</text>
+            <rect x="16" y="376" width="188" height="36" rx="4" fill="none" stroke="#1f1f1f"/>
+            <circle cx="32" cy="394" r="8" fill="#7a3dff"/>
+            <text x="48" y="397" font-family="Geist" font-size="12" fill="#fff">igor@krvo.ru</text>
+
+            <text x="248" y="44" font-family="Geist" font-size="11" font-weight="500" letter-spacing="1.5" fill="#898989">ОБЗОР</text>
+            <text x="248" y="80" font-family="Geist" font-size="22" font-weight="600" letter-spacing="-0.5" fill="#fff">Активные подключения</text>
+
+            <g transform="translate(248, 110)">
+              <rect width="216" height="80" rx="6" fill="none" stroke="#252525"/>
+              <text x="20" y="28" font-family="Geist" font-size="11" letter-spacing="1.2" fill="#898989">ОНЛАЙН</text>
+              <text x="20" y="60" font-family="Geist" font-size="26" font-weight="600" fill="#fff">12 <tspan font-size="13" fill="#898989">/ 15</tspan></text>
+            </g>
+            <g transform="translate(480, 110)">
+              <rect width="216" height="80" rx="6" fill="none" stroke="#252525"/>
+              <text x="20" y="28" font-family="Geist" font-size="11" letter-spacing="1.2" fill="#898989">ТРАФИК · 24Ч</text>
+              <text x="20" y="60" font-family="Geist" font-size="26" font-weight="600" fill="#fff">42.7 <tspan font-size="13" fill="#898989">GB</tspan></text>
+            </g>
+            <g transform="translate(712, 110)">
+              <rect width="216" height="80" rx="6" fill="none" stroke="#252525"/>
+              <text x="20" y="28" font-family="Geist" font-size="11" letter-spacing="1.2" fill="#898989">ЗАДЕРЖКА</text>
+              <text x="20" y="60" font-family="Geist" font-size="26" font-weight="600" fill="#fff">0.4 <tspan font-size="13" fill="#898989">ms</tspan></text>
+            </g>
+            <g transform="translate(944, 110)">
+              <rect width="216" height="80" rx="6" fill="none" stroke="#252525"/>
+              <text x="20" y="28" font-family="Geist" font-size="11" letter-spacing="1.2" fill="#898989">ПРОТОКОЛ</text>
+              <text x="20" y="60" font-family="Geist" font-size="22" font-weight="600" fill="#fff">WireGuard</text>
+            </g>
+
+            <g transform="translate(248, 218)">
+              <text x="0" y="0" font-family="Geist" font-size="11" font-weight="500" letter-spacing="1.2" fill="#898989">СОТРУДНИКИ</text>
+              <line x1="0" y1="14" x2="928" y2="14" stroke="#1f1f1f"/>
+
+              <g transform="translate(0,42)">
+                <circle cx="10" cy="0" r="4" fill="#00d722"/>
+                <text x="28" y="4" font-family="Geist" font-size="13" font-weight="500" fill="#fff">Анна Соколова</text>
+                <text x="220" y="4" font-family="Geist" font-size="12" fill="#a3a3a3">MacBook Pro · macOS</text>
+                <text x="500" y="4" font-family="JetBrains Mono" font-size="11" fill="#a3a3a3">10.42.0.18</text>
+                <text x="660" y="4" font-family="Geist" font-size="12" fill="#fff">1.2 GB</text>
+                <text x="780" y="4" font-family="Geist" font-size="11" letter-spacing="0.6" fill="#00d722">● АКТИВНО</text>
+              </g>
+              <line x1="0" y1="58" x2="928" y2="58" stroke="#1f1f1f"/>
+
+              <g transform="translate(0,86)">
+                <circle cx="10" cy="0" r="4" fill="#00d722"/>
+                <text x="28" y="4" font-family="Geist" font-size="13" font-weight="500" fill="#fff">Игорь Велозов</text>
+                <text x="220" y="4" font-family="Geist" font-size="12" fill="#a3a3a3">iPhone 15 · iOS</text>
+                <text x="500" y="4" font-family="JetBrains Mono" font-size="11" fill="#a3a3a3">10.42.0.21</text>
+                <text x="660" y="4" font-family="Geist" font-size="12" fill="#fff">320 MB</text>
+                <text x="780" y="4" font-family="Geist" font-size="11" letter-spacing="0.6" fill="#00d722">● АКТИВНО</text>
+              </g>
+              <line x1="0" y1="102" x2="928" y2="102" stroke="#1f1f1f"/>
+
+              <g transform="translate(0,130)">
+                <circle cx="10" cy="0" r="4" fill="#00d722"/>
+                <text x="28" y="4" font-family="Geist" font-size="13" font-weight="500" fill="#fff">Мария Кречетова</text>
+                <text x="220" y="4" font-family="Geist" font-size="12" fill="#a3a3a3">ThinkPad · Linux</text>
+                <text x="500" y="4" font-family="JetBrains Mono" font-size="11" fill="#a3a3a3">10.42.0.07</text>
+                <text x="660" y="4" font-family="Geist" font-size="12" fill="#fff">3.8 GB</text>
+                <text x="780" y="4" font-family="Geist" font-size="11" letter-spacing="0.6" fill="#00d722">● АКТИВНО</text>
+              </g>
+              <line x1="0" y1="146" x2="928" y2="146" stroke="#1f1f1f"/>
+
+              <g transform="translate(0,174)">
+                <circle cx="10" cy="0" r="4" fill="#6b6b6b"/>
+                <text x="28" y="4" font-family="Geist" font-size="13" font-weight="500" fill="#a3a3a3">Сергей Носов</text>
+                <text x="220" y="4" font-family="Geist" font-size="12" fill="#6b6b6b">MacBook · macOS</text>
+                <text x="500" y="4" font-family="JetBrains Mono" font-size="11" fill="#6b6b6b">—</text>
+                <text x="660" y="4" font-family="Geist" font-size="12" fill="#6b6b6b">—</text>
+                <text x="780" y="4" font-family="Geist" font-size="11" letter-spacing="0.6" fill="#6b6b6b">● OFFLINE</text>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== OVERVIEW — SUMMARY UNDER DASHBOARD ============== -->
+  <section class="overview">
+    <div class="container">
+      <p class="overview-lead reveal">
+        Подключение, выдача доступов и единые настройки<br />
+        для всей компании в одном интерфейсе
+      </p>
+      <div class="overview-cards reveal">
+        <div class="overview-card">
+          <h3>Централизованное управление</h3>
+          <p>У сотрудников всё работает одинаково и стабильно</p>
+          <img class="overview-card-img" src="assets/1icon.png" width="140" height="140" alt="" aria-hidden="true" />
+        </div>
+        <div class="overview-card">
+          <h3>Контролируемая безопасность</h3>
+          <p>Корпоративный трафик защищён</p>
+          <img class="overview-card-img" src="assets/2icon.png" width="140" height="140" alt="" aria-hidden="true" />
+        </div>
+        <div class="overview-card">
+          <h3>Техническое сопровождение</h3>
+          <p>Инфраструктура работает стабильно и без сбоев</p>
+          <img class="overview-card-img" src="assets/3icon.png" width="140" height="140" alt="" aria-hidden="true" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ARCHITECTURE — FLAT 3-COL ============== -->
+  <section id="architecture">
+    <div class="container">
+      <div class="s-head reveal">
+        <span class="eyebrow">Как устроено</span>
+        <h2 class="display-lg">Стандартная архитектура.<br />Промышленные протоколы.<br />Сплит-маршрутизация</h2>
+        <p class="body-lg">
+          Российские сервисы работают напрямую через резидентский IP. Международные сервисы работают через защищённый канал и выделенную инфраструктуру
+        </p>
+      </div>
+
+      <div class="topo reveal">
+        <div class="topo-bar">
+          <span class="topo-bar-label">Topology · live</span>
+          <span class="topo-bar-stat"><span class="topo-bar-dot"></span>42 peers · 14ms</span>
+        </div>
+
+        <div class="topo-stage">
+          <svg class="topo-wires" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true">
+            <g class="topo-wire-group left" data-wire-left>
+              <path class="topo-wire" />
+              <path class="topo-wire" />
+              <path class="topo-wire" />
+              <path class="topo-wire" />
+              <path class="topo-wire" />
+            </g>
+            <g class="topo-wire-group right" data-wire-right>
+              <path class="topo-wire mint" data-wire-ru />
+              <path class="topo-wire mint" data-wire-intl />
+            </g>
+            <g class="topo-signals" data-signals></g>
+          </svg>
+
+          <div class="topo-col topo-devices">
+            <div class="topo-device">
+              <span class="topo-dev-dot"></span>
+              <span class="topo-dev-body"><span class="topo-dev-name">macbook · @petrov.a</span><span class="topo-dev-meta">macOS · WireGuard</span></span>
+            </div>
+            <div class="topo-device">
+              <span class="topo-dev-dot"></span>
+              <span class="topo-dev-body"><span class="topo-dev-name">iphone · @ivanov.k</span><span class="topo-dev-meta">iOS · IKEv2</span></span>
+            </div>
+            <div class="topo-device">
+              <span class="topo-dev-dot"></span>
+              <span class="topo-dev-body"><span class="topo-dev-name">linux · @smith.j</span><span class="topo-dev-meta">Ubuntu · WireGuard</span></span>
+            </div>
+            <div class="topo-device">
+              <span class="topo-dev-dot"></span>
+              <span class="topo-dev-body"><span class="topo-dev-name">win · @maria.s</span><span class="topo-dev-meta">Windows · OpenVPN</span></span>
+            </div>
+            <div class="topo-device topo-device-more">
+              <span class="topo-dev-dot"></span>
+              <span class="topo-dev-body"><span class="topo-dev-name">+ 38 ещё</span><span class="topo-dev-meta">mixed</span></span>
+            </div>
+          </div>
+
+          <div class="topo-gateway">
+            <div class="topo-gw-card">
+              <img class="topo-gw-img" src="assets/serv.png" width="120" height="172" alt="" aria-hidden="true" />
+              <span class="topo-gw-eyebrow">Oasis gateway</span>
+              <h3 class="topo-gw-name">Выделенный сервер.<br />Собственный IP</h3>
+            </div>
+          </div>
+
+          <div class="topo-col topo-services">
+            <div class="topo-svc topo-svc-direct">
+              <div class="topo-svc-head">Российские сервисы</div>
+              <ul>
+                <li>Банки</li>
+                <li>Госуслуги</li>
+                <li>Яндекс · Почта</li>
+                <li>1С · Битрикс24</li>
+                <li>Платёжные</li>
+              </ul>
+            </div>
+            <div class="topo-svc topo-svc-secured">
+              <div class="topo-svc-head">Зарубежные сервисы</div>
+              <ul>
+                <li>ИИ-инструменты</li>
+                <li>Облачные платформы</li>
+                <li>SaaS · командная работа</li>
+                <li>Платёжные международные</li>
+                <li>Разработка · CI/CD</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="topo-proto">
+          <div class="topo-proto-intro">
+            <span class="topo-proto-eyebrow">Протоколы</span>
+            <p>Используются стандартные сетевые протоколы и предсказуемая архитектура подключения</p>
+          </div>
+          <div class="topo-proto-list">
+            <div class="topo-proto-item">
+              <span class="topo-proto-name">WireGuard</span>
+              <span class="topo-proto-tag">основной</span>
+            </div>
+            <div class="topo-proto-item">
+              <span class="topo-proto-name">OpenVPN</span>
+            </div>
+            <div class="topo-proto-item">
+              <span class="topo-proto-name">IPsec / IKEv2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ACCESS — TABS + VISUAL ============== -->
+  <section id="access">
+    <div class="container">
+      <div class="s-head reveal">
+        <span class="eyebrow">Управление доступами</span>
+        <h2 class="display-lg">Подключение и отключение<br />в Telegram-боте<br />или личном кабинете</h2>
+      </div>
+
+      <div class="access-plate">
+      <div class="tab-strip" data-tabs="access">
+        <button class="tab-btn active" data-target="acc-1">
+          <span class="tab-num">01</span>
+          Подключение по QR-коду
+        </button>
+        <button class="tab-btn" data-target="acc-2">
+          <span class="tab-num">02</span>
+          Контроль
+        </button>
+        <button class="tab-btn" data-target="acc-3">
+          <span class="tab-num">03</span>
+          Отзыв доступа
+        </button>
+      </div>
+
+      <div id="acc-1" class="tab-panel active">
+        <div class="access-panel">
+          <div class="copy">
+            <h3 class="access-card-title">Подключение по QR-коду</h3>
+            <p>Вы создаете QR-код доступа в личном кабинете или Telegram-боте. Новый сотрудник сканирует код в клиентском приложении — и подключается к системе за пару минут без ручной настройки</p>
+            <ul class="access-meta">
+              <li><span>Время подключения</span><strong>~3 минуты</strong></li>
+              <li><span>Поддержка</span><strong>iOS · Android · macOS · Windows · Linux</strong></li>
+              <li><span>Действие QR-кода</span><strong>Не истекает</strong></li>
+            </ul>
+          </div>
+          <div class="access-vis">
+            <a class="qr-link" href="https://oasisnetwork.ru" target="_blank" rel="noopener"><img class="qr-phone-img" src="assets/group-2.png" alt="QR-код · oasisnetwork.ru" /></a>
+          </div>
+        </div>
+      </div>
+
+      <div id="acc-2" class="tab-panel">
+        <div class="access-panel">
+          <div class="copy">
+            <h3 class="access-card-title">Контроль</h3>
+            <p>Все подключения отображаются в едином интерфейсе: активные сессии, использование трафика, статус устройств. Видно, кто сейчас работает, через какое устройство и сколько передал данных</p>
+            <ul class="access-meta">
+              <li><span>Просмотр</span><strong>Live-сессии и истории подключений</strong></li>
+              <li><span>Статистика</span><strong>Трафик, статус, устройства</strong></li>
+              <li><span>API</span><strong>Доступно по запросу</strong></li>
+            </ul>
+          </div>
+          <div class="access-vis">
+            <div class="sessions-table">
+              <div class="sessions-table-head">
+                <span></span>
+                <span>Сотрудник</span>
+                <span>Трафик</span>
+                <span>Активен</span>
+              </div>
+              <div class="session-row">
+                <span class="dot live"></span>
+                <span>
+                  <span class="name">Анна К.</span>
+                  <span class="dev">macOS · WireGuard</span>
+                </span>
+                <span class="meta">2.1 ГБ</span>
+                <span class="time">сейчас</span>
+              </div>
+              <div class="session-row">
+                <span class="dot live"></span>
+                <span>
+                  <span class="name">Михаил В.</span>
+                  <span class="dev">iPhone · IKEv2</span>
+                </span>
+                <span class="meta">412 МБ</span>
+                <span class="time">2 мин</span>
+              </div>
+              <div class="session-row">
+                <span class="dot live"></span>
+                <span>
+                  <span class="name">Елена Р.</span>
+                  <span class="dev">Windows · WireGuard</span>
+                </span>
+                <span class="meta">880 МБ</span>
+                <span class="time">14 мин</span>
+              </div>
+              <div class="session-row">
+                <span class="dot off"></span>
+                <span>
+                  <span class="name">Дмитрий О.</span>
+                  <span class="dev">Windows · оффлайн</span>
+                </span>
+                <span class="meta">—</span>
+                <span class="time">вчера</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="acc-3" class="tab-panel">
+        <div class="access-panel">
+          <div class="copy">
+            <h3 class="access-card-title">Отзыв доступа</h3>
+            <p>После увольнения сотрудник мгновенно теряет подключение ко всей инфраструктуре. Доступ отзывается одной командой в Telegram-боте — за доли секунды, без перенастройки сервера</p>
+            <ul class="access-meta">
+              <li><span>Время отзыва</span><strong>&lt; 1 секунды</strong></li>
+              <li><span>Способ</span><strong>Telegram-бот или личный кабинет</strong></li>
+              <li><span>Журнал</span><strong>Все действия логируются</strong></li>
+            </ul>
+          </div>
+          <div class="access-vis">
+            <div class="tg-stage">
+              <div class="tg-msg in">/отозвать @dmitry.o</div>
+              <div class="tg-msg out"><span class="ok"></span>Доступ отозван · 0.3с</div>
+              <div class="tg-msg in">/статус</div>
+              <div class="tg-msg out">14 активных · 1 отозван</div>
+              <div class="tg-msg in">/журнал @dmitry.o</div>
+              <div class="tg-msg out">Последняя сессия: 14:23 · 1.2 ГБ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TESTIMONIALS — FULL-WIDTH MULTI-CARD CAROUSEL ============== -->
+  <section id="testimonials" class="testimonials" aria-roledescription="carousel" aria-label="Отзывы клиентов">
+    <div class="container">
+      <div class="s-head reveal">
+        <span class="eyebrow">Отзывы</span>
+        <h2 class="display-lg">Что говорят клиенты</h2>
+      </div>
+    </div>
+
+    <div class="testimonials-carousel">
+      <div class="testimonials-viewport">
+        <ol class="testimonials-track">
+          <li class="t-card">
+            <div class="t-company">NORTHLANE</div>
+            <blockquote>«Раньше у нас каждый сотрудник сидел через что придётся. Кто-то через бесплатные VPN, кто-то через свои подписки. Постоянно были проблемы: то не подключается, то что-то режется. После перехода всё наконец стало работать одинаково у всей команды.»</blockquote>
+            <footer class="t-foot">
+              <img class="t-avatar" src="assets/avatars/img-11.jpg" alt="Андрей Соколов" />
+              <div>
+                <div class="t-name">Андрей Соколов</div>
+                <div class="t-role">IT-директор</div>
+              </div>
+            </footer>
+          </li>
+
+          <li class="t-card">
+            <div class="t-company">PIXEL RIVER</div>
+            <blockquote>«У нас распределённая команда, много зарубежных сервисов и AI-инструментов. До этого сотрудники постоянно писали в чат: „у кого работает?“. Сейчас таких сообщений нет. Это лучший показатель.»</blockquote>
+            <footer class="t-foot">
+              <img class="t-avatar" src="assets/avatars/img-5.jpg" alt="Мария Громова" />
+              <div>
+                <div class="t-name">Мария Громова</div>
+                <div class="t-role">Операционный директор</div>
+              </div>
+            </footer>
+          </li>
+
+          <li class="t-card">
+            <div class="t-company">СТУДИЯ ФОРМА</div>
+            <blockquote>«Мы долго не хотели влезать в самостоятельную настройку инфраструктуры, потому что понимали, что потом это придётся ещё и поддерживать. В итоге оказалось проще подключить готовое решение и не тратить на это время команды.»</blockquote>
+            <footer class="t-foot">
+              <img class="t-avatar" src="assets/avatars/img-13.jpg" alt="Илья Кравцов" />
+              <div>
+                <div class="t-name">Илья Кравцов</div>
+                <div class="t-role">Сооснователь</div>
+              </div>
+            </footer>
+          </li>
+
+          <li class="t-card">
+            <div class="t-company">КОМАНДА АСТЕР</div>
+            <blockquote>«Для нас оказалось очень удобно, что нового сотрудника можно подключить буквально за несколько минут. Не нужно созваниваться, что-то объяснять и проверять настройки вручную на каждом устройстве.»</blockquote>
+            <footer class="t-foot">
+              <img class="t-avatar" src="assets/avatars/img-9.jpg" alt="Екатерина Белова" />
+              <div>
+                <div class="t-name">Екатерина Белова</div>
+                <div class="t-role">Директор по персоналу</div>
+              </div>
+            </footer>
+          </li>
+
+          <li class="t-card">
+            <div class="t-company">WHITE PEAK</div>
+            <blockquote>«До этого часть сотрудников вообще отключала VPN, когда нужно было зайти в российские сервисы или банковские приложения. Сейчас всё работает нормально одновременно, без постоянного переключения.»</blockquote>
+            <footer class="t-foot">
+              <img class="t-avatar" src="assets/avatars/img-15.jpg" alt="Дмитрий Лаврентьев" />
+              <div>
+                <div class="t-name">Дмитрий Лаврентьев</div>
+                <div class="t-role">Руководитель digital-направления</div>
+              </div>
+            </footer>
+          </li>
+
+          <li class="t-card">
+            <div class="t-company">LAYER EIGHT</div>
+            <blockquote>«Понравилось, что это ощущается именно как корпоративный сервис, а не как очередной массовый VPN. Есть документы, нормальная поддержка и понятная логика управления доступами.»</blockquote>
+            <footer class="t-foot">
+              <img class="t-avatar" src="assets/avatars/img-32.jpg" alt="Анна Миронова" />
+              <div>
+                <div class="t-name">Анна Миронова</div>
+                <div class="t-role">Исполнительный директор</div>
+              </div>
+            </footer>
+          </li>
+
+          <li class="t-card">
+            <div class="t-company">DELTA SOFTWORKS</div>
+            <blockquote>«Первую неделю команда привыкала к новой схеме подключения, но потом вопросы практически исчезли. Сейчас VPN вообще перестал быть отдельной темой внутри компании, всё работает в фоне.»</blockquote>
+            <footer class="t-foot">
+              <img class="t-avatar" src="assets/avatars/img-12.jpg" alt="Сергей Власов" />
+              <div>
+                <div class="t-name">Сергей Власов</div>
+                <div class="t-role">Технический директор</div>
+              </div>
+            </footer>
+          </li>
+
+          <li class="t-card">
+            <div class="t-company">БЮРО МОТИВ</div>
+            <blockquote>«Самое ценное для нас — стабильность. Раньше сотрудники постоянно переподключались между разными сервисами. Сейчас всё стало предсказуемо, а техподдержка быстро отвечает, если возникают вопросы.»</blockquote>
+            <footer class="t-foot">
+              <img class="t-avatar" src="assets/avatars/img-10.jpg" alt="Ольга Титова" />
+              <div>
+                <div class="t-name">Ольга Титова</div>
+                <div class="t-role">Руководитель проектов</div>
+              </div>
+            </footer>
+          </li>
+
+          <li class="t-card">
+            <div class="t-company">ОРБИТА СИСТЕМС</div>
+            <blockquote>«После увольнения сотрудников доступы убираются за пару минут. Для нашего бизнеса это удобно.»</blockquote>
+            <footer class="t-foot">
+              <img class="t-avatar" src="assets/avatars/img-14.jpg" alt="Павел Еремин" />
+              <div>
+                <div class="t-name">Павел Еремин</div>
+                <div class="t-role">Сооснователь</div>
+              </div>
+            </footer>
+          </li>
+
+          <li class="t-card">
+            <div class="t-company">NOVA DESK</div>
+            <blockquote>«Для нас было важно, чтобы всё было официально: договор, закрывающие документы, нормальная оплата для бухгалтерии. Плюс понравилось, что можно спокойно масштабировать подключение по мере роста команды.»</blockquote>
+            <footer class="t-foot">
+              <img class="t-avatar" src="assets/avatars/img-26.jpg" alt="Виктория Орлова" />
+              <div>
+                <div class="t-name">Виктория Орлова</div>
+                <div class="t-role">Финансовый директор</div>
+              </div>
+            </footer>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="testimonials-controls">
+        <div class="testimonials-progress" aria-hidden="true"><span class="fill"></span></div>
+        <div class="testimonials-arrows">
+          <button type="button" class="testimonials-nav testimonials-nav--prev" aria-label="Предыдущий отзыв">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button type="button" class="testimonials-nav testimonials-nav--next" aria-label="Следующий отзыв">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PRICING ============== -->
+  <section id="pricing">
+    <div class="pricing-bg" aria-hidden="true">
+      <img src="assets/bg-left.jpg" alt="" role="presentation" />
+    </div>
+    <div class="container">
+      <div class="s-head reveal">
+        <span class="eyebrow">Стоимость</span>
+        <h2 class="display-lg">Прозрачное ценообразование<br />без скрытых платежей</h2>
+      </div>
+
+      <div class="pricing-card reveal">
+        <div class="pricing-main">
+          <div class="pricing-headline">
+            <div class="pricing-amount">490&nbsp;₽</div>
+            <div class="pricing-unit">в месяц за устройство</div>
+          </div>
+
+          <ul class="pricing-perks">
+            <li>Виртуальный или выделенный сервер</li>
+            <li>Техническое сопровождение</li>
+            <li>Поддержка в рабочие часы</li>
+          </ul>
+
+          <div class="pricing-stats">
+            <div class="pricing-stat">
+              <div class="pricing-stat-value">15 <small>устройств</small></div>
+              <div class="pricing-stat-label">Мин. объём подключения</div>
+            </div>
+            <div class="pricing-stat">
+              <div class="pricing-stat-value">50 000 <small>₽</small></div>
+              <div class="pricing-stat-label">Первичная настройка</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-examples">
+          <header class="pricing-examples-head">
+            <span class="eyebrow">Расчёт стоимости</span>
+            <div class="pricing-toggle" role="group" aria-label="Период оплаты">
+              <button type="button" class="pricing-toggle-btn active" data-period="month">В месяц</button>
+              <button type="button" class="pricing-toggle-btn" data-period="year">В год</button>
+            </div>
+          </header>
+
+          <p class="pricing-examples-desc">Стоимость зависит от количества подключённых устройств и конфигурации инфраструктуры</p>
+
+          <div class="pricing-calc">
+            <label class="calc-field">
+              <input type="text" class="calc-devices" value="25" inputmode="numeric" aria-label="Количество устройств, минимум 15" />
+              <span class="calc-field-label">Количество устройств</span>
+              <span class="calc-stepper">
+                <button type="button" class="calc-step" data-step="down" tabindex="-1" aria-label="Убрать устройство">−</button>
+                <button type="button" class="calc-step" data-step="up" tabindex="-1" aria-label="Добавить устройство">+</button>
+              </span>
+            </label>
+            <label class="calc-field">
+              <input type="text" class="calc-price" inputmode="numeric" aria-label="Цена в рублях" />
+              <span class="calc-field-label calc-price-label">Цена, ₽ / мес</span>
+            </label>
+          </div>
+
+          <label class="pricing-switch">
+            <input type="checkbox" class="pricing-switch-input" checked />
+            <span class="pricing-switch-track" aria-hidden="true"></span>
+            <span class="pricing-switch-label">Оплата за год <small>−10%</small></span>
+          </label>
+
+          <a href="#cta" class="btn btn-primary btn-lg pricing-cta">Подключить</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== START — NUMBERED EDITORIAL ============== -->
+  <section id="cta" class="start-section">
+    <div class="container">
+      <div class="s-head reveal start-section-head">
+        <span class="eyebrow">Как начать</span>
+        <h2 class="display-lg">От договора до&nbsp;запуска —<br />два рабочих дня</h2>
+      </div>
+
+      <div class="start-cta reveal">
+        <a href="#cta" class="btn btn-primary btn-lg">Подключить</a>
+        <a href="#cta" class="btn btn-ghost btn-lg">Получить консультацию</a>
+      </div>
+
+      <div class="problem-cards start-cards reveal">
+        <div class="problem-card">
+          <div class="problem-card-tag">
+            <span class="dot"></span>
+            <span class="num">01</span>
+          </div>
+          <h3>Помесячная оплата</h3>
+          <p>Не подходит — не продлеваете. Подключение можно остановить в&nbsp;любой момент без штрафов</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-card-tag">
+            <span class="dot"></span>
+            <span class="num">02</span>
+          </div>
+          <h3>Документы и сопровождение</h3>
+          <p>Предоставляем договор, закрывающие документы и&nbsp;акты для бухгалтерии</p>
+        </div>
+
+        <div class="problem-card">
+          <div class="problem-card-tag">
+            <span class="dot"></span>
+            <span class="num">03</span>
+          </div>
+          <h3>Гибкие форматы</h3>
+          <p>Поддерживаются разные способы и&nbsp;форматы оплаты в&nbsp;зависимости от задач клиентов</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand">
+            <img src="logo.svg" alt="KRVO" width="180" />
+          </a>
+          <p>Управляемая виртуальная инфраструктура маршрутизации для российских компаний.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Продукт</h5>
+          <ul>
+            <li><a href="#problem">Проблема</a></li>
+            <li><a href="#solution">Решение</a></li>
+            <li><a href="#architecture">Архитектура</a></li>
+            <li><a href="#access">Управление</a></li>
+            <li><a href="#pricing">Стоимость</a></li>
+            <li><a href="#testimonials">Отзывы</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Связь</h5>
+          <ul>
+            <li><a href="#cta">Подключить</a></li>
+            <li><a href="#cta">Консультация</a></li>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">Email</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col--requisites">
+          <h5>Реквизиты</h5>
+          <ul>
+            <li>ООО «КРВО»</li>
+            <li>ИНН: 7707482910</li>
+            <li>ОГРН: 1227700384521</li>
+            <li>КПП: 770701001</li>
+            <li>125047, г. Москва, ул. Лесная, д. 5, стр. 1, офис 412</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 ООО «КРВО». Все права защищены.</span>
+        <span class="footer-bottom-links">
+          <a href="offer.html" class="footer-bottom-link" target="_blank" rel="noopener">Договор-оферта</a>
+          <a href="tariffs.html" class="footer-bottom-link" target="_blank" rel="noopener">Тарифы</a>
+          <a href="acceptable-use.html" class="footer-bottom-link" target="_blank" rel="noopener">Правила использования сервиса</a>
+          <a href="policy.html" class="footer-bottom-link" target="_blank" rel="noopener">Пользовательское соглашение</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============== APPLICATION MODAL ============== -->
+  <div class="modal" id="application-modal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="application-modal-title">
+      <button type="button" class="modal-close" aria-label="Закрыть" data-modal-close>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <form class="start-form modal-form" novalidate>
+        <h3 class="modal-title" id="application-modal-title">Заявка на подключение</h3>
+
+        <div class="start-form-grid">
+          <label class="field">
+            <input type="text" name="company" required placeholder=" " />
+            <span class="field-label">Название организации / ИП</span>
+            <span class="field-error">Укажите название организации</span>
+          </label>
+
+          <label class="field">
+            <input type="text" name="inn" required inputmode="numeric" pattern="\d{10}" maxlength="10" data-mask="inn" placeholder=" " />
+            <span class="field-label">ИНН</span>
+            <span class="field-error">Введите 10 цифр ИНН</span>
+          </label>
+
+          <label class="field">
+            <input type="text" name="contact" required placeholder=" " />
+            <span class="field-label">Контактное лицо</span>
+            <span class="field-error">Укажите контактное лицо</span>
+          </label>
+
+          <label class="field">
+            <input type="email" name="email" placeholder=" " />
+            <span class="field-label">Email</span>
+            <span class="field-error">Введите корректный email</span>
+          </label>
+
+          <label class="field">
+            <input type="tel" name="phone" required data-mask="phone" pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}" placeholder=" " />
+            <span class="field-label">Телефон</span>
+            <span class="field-error">Введите телефон полностью</span>
+          </label>
+
+          <label class="field">
+            <input type="number" name="users" required min="15" step="1" inputmode="numeric" placeholder=" " />
+            <span class="field-label">Планируемое количество пользователей</span>
+            <span class="field-error">Минимум 15 пользователей</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-arrow start-form-submit">Отправить заявку<span class="start-form-submit-spinner" aria-hidden="true"><i></i><i></i><i></i></span></button>
+
+        <ul class="start-form-confirm">
+          <li><label class="check">
+            <input type="checkbox" checked />
+            <span class="check-box"></span>
+            <span class="check-label">Подтверждаю, что действую от имени юридического лица или индивидуального предпринимателя</span>
+          </label></li>
+          <li><label class="check">
+            <input type="checkbox" checked />
+            <span class="check-box"></span>
+            <span class="check-label">Подтверждаю, что инфраструктура используется для производственной и хозяйственной деятельности</span>
+          </label></li>
+          <li><label class="check">
+            <input type="checkbox" checked />
+            <span class="check-box"></span>
+            <span class="check-label">Ознакомлен и согласен с <a href="offer.html" class="check-link" target="_blank" rel="noopener">условиями оферты Исполнителя</a></span>
+          </label></li>
+          <li><label class="check">
+            <input type="checkbox" checked />
+            <span class="check-box"></span>
+            <span class="check-label">Ознакомлен с <a href="acceptable-use.html" class="check-link" target="_blank" rel="noopener">Правилами допустимого использования инфраструктуры</a></span>
+          </label></li>
+        </ul>
+      </form>
+
+      <div class="start-form-success" hidden>
+        <div class="start-form-success-icon-wrap">
+          <img class="start-form-success-icon" src="assets/send.png" width="170" height="170" alt="" aria-hidden="true" />
+        </div>
+        <h3 class="start-form-success-title">Заявка отправлена</h3>
+        <p class="start-form-success-text">Спасибо! Мы свяжемся с вами в&nbsp;ближайшее время</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============== COOKIE NOTICE ============== -->
+  <div class="cookie-notice" id="cookie-notice" hidden>
+    <div class="cookie-notice-text">
+      Мы используем cookies, чтобы сайт работал корректно и анализировать его использование. Продолжая, вы <a href="policy.html" class="cookie-notice-link" target="_blank" rel="noopener">соглашаетесь с обработкой данных</a>
+    </div>
+    <div class="cookie-notice-actions">
+      <button type="button" class="btn btn-primary" id="cookie-accept">Принять</button>
+    </div>
+  </div>
+
+  <script>
+    // Cookie notice — show once, persist dismissal in localStorage.
+    (() => {
+      const notice = document.getElementById('cookie-notice');
+      const accept = document.getElementById('cookie-accept');
+      if (!notice || !accept) return;
+      try {
+        if (localStorage.getItem('krvo-cookies-accepted')) return;
+      } catch (_) { /* private mode — fall through and show */ }
+
+      notice.hidden = false;
+      requestAnimationFrame(() => notice.classList.add('is-visible'));
+
+      accept.addEventListener('click', () => {
+        try { localStorage.setItem('krvo-cookies-accepted', '1'); } catch (_) {}
+        notice.classList.remove('is-visible');
+        notice.addEventListener('transitionend', () => { notice.hidden = true; }, { once: true });
+      });
+    })();
+  </script>
+
+  <script>
+    // Group tab buttons by their parent strip's data-tabs name.
+    // When a button is clicked, activate the matching panel.
+    // For the protocols section the panel on the right side
+    // must also swap, so we route by data-target → panels with id == target
+    // AND data-target prefix patterns: e.g. proto-wg → proto-wg + proto-wg-vis.
+    document.querySelectorAll('.tab-strip').forEach(strip => {
+      const group = strip.dataset.tabs;
+      strip.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.dataset.target;
+
+          // Update buttons in this strip
+          strip.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // Collect all related panel ids: target itself + target-vis variant
+          const ids = [target, target + '-vis'];
+
+          // Find sibling tab-panels: identify all panels controlled by this strip
+          // by collecting buttons' data-target attributes in the strip
+          const siblingTargets = Array.from(strip.querySelectorAll('.tab-btn'))
+            .map(b => b.dataset.target);
+          const allRelated = siblingTargets.flatMap(t => [t, t + '-vis']);
+
+          allRelated.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.classList.remove('active');
+          });
+
+          ids.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.classList.add('active');
+          });
+        });
+      });
+    });
+  </script>
+
+  <script>
+    const nav = document.querySelector('.nav');
+    function updateNav() {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 10);
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  </script>
+
+  <script>
+    // Reveal section headers (eyebrow + heading) when they enter the viewport.
+    // CSS handles the actual animation once .in-view is added.
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+      // rootMargin shrinks the viewport's bottom edge by 25% of its height,
+      // so the heading must rise a quarter of the screen up from the bottom
+      // before it animates — consistent across screen sizes.
+    }, { threshold: 0, rootMargin: '0px 0px -25% 0px' });
+
+    // Elements with data-reveal-offset="N" trigger N px later than the rest:
+    // their own observer pushes the bottom edge down by 25% + N px.
+    function offsetObserver(px) {
+      const bottom = Math.round(window.innerHeight * 0.25) + px;
+      return new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            entry.target._revealObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0, rootMargin: `0px 0px -${bottom}px 0px` });
+    }
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      const offset = parseInt(el.dataset.revealOffset, 10);
+      if (offset > 0) {
+        const obs = offsetObserver(offset);
+        el._revealObs = obs;
+        obs.observe(el);
+      } else {
+        revealObserver.observe(el);
+      }
+    });
+  </script>
+
+  <script>
+    // Testimonials — infinite horizontal carousel with clones at both ends.
+    const slider = document.querySelector('.testimonials');
+    if (slider) {
+      const track = slider.querySelector('.testimonials-track');
+      const prevBtn = slider.querySelector('.testimonials-nav--prev');
+      const nextBtn = slider.querySelector('.testimonials-nav--next');
+      const progress = slider.querySelector('.testimonials-progress');
+      const gap = 24;
+      const interval = 10000;
+      const cloneCount = 3; // covers any visible-count breakpoint
+
+      const originals = Array.from(track.children);
+      const N = originals.length;
+
+      originals.slice(0, cloneCount).forEach(card => {
+        const c = card.cloneNode(true);
+        c.setAttribute('aria-hidden', 'true');
+        track.appendChild(c);
+      });
+      originals.slice(-cloneCount).reverse().forEach(card => {
+        const c = card.cloneNode(true);
+        c.setAttribute('aria-hidden', 'true');
+        track.prepend(c);
+      });
+
+      // Start one card past the first original so the first card peeks in from the left
+      // — same look as "after one next click".
+      let index = cloneCount + 1;
+      let timer;
+      let isTransitioning = false;
+
+      const apply = (animate = true) => {
+        const cardWidth = track.children[0].getBoundingClientRect().width;
+        const offset = index * (cardWidth + gap);
+        if (!animate) {
+          track.style.transition = 'none';
+          track.style.transform = `translateX(-${offset}px)`;
+          void track.offsetWidth;
+          track.style.transition = '';
+        } else {
+          track.style.transform = `translateX(-${offset}px)`;
+        }
+      };
+
+      const go = (next) => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        index = next;
+        apply(true);
+      };
+
+      track.addEventListener('transitionend', (e) => {
+        if (e.propertyName !== 'transform') return;
+        if (index >= cloneCount + N) {
+          index -= N;
+          apply(false);
+        } else if (index < cloneCount) {
+          index += N;
+          apply(false);
+        }
+        isTransitioning = false;
+      });
+
+      const resetProgress = () => {
+        if (!progress) return;
+        progress.classList.remove('running', 'paused');
+        void progress.offsetWidth;
+        progress.classList.add('running');
+      };
+
+      const tick = () => {
+        go(index + 1);
+        resetProgress();
+        timer = setTimeout(tick, interval);
+      };
+
+      const start = () => {
+        clearTimeout(timer);
+        resetProgress();
+        timer = setTimeout(tick, interval);
+      };
+
+      prevBtn.addEventListener('click', () => { go(index - 1); start(); });
+      nextBtn.addEventListener('click', () => { go(index + 1); start(); });
+
+      // Touch swipe — drag the track, snap to prev/next on release.
+      const viewport = slider.querySelector('.testimonials-viewport');
+      let dragX = 0, dragDX = 0, dragging = false;
+      viewport.addEventListener('touchstart', (e) => {
+        if (isTransitioning) return;
+        dragging = true; dragX = e.touches[0].clientX; dragDX = 0;
+        clearTimeout(timer);
+        track.style.transition = 'none';
+      }, { passive: true });
+      viewport.addEventListener('touchmove', (e) => {
+        if (!dragging) return;
+        dragDX = e.touches[0].clientX - dragX;
+        const cardWidth = track.children[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(${-(index * (cardWidth + gap)) + dragDX}px)`;
+      }, { passive: true });
+      const endDrag = () => {
+        if (!dragging) return;
+        dragging = false;
+        track.style.transition = '';
+        const cardWidth = track.children[0].getBoundingClientRect().width;
+        const threshold = Math.min(cardWidth * 0.2, 80);
+        if (dragDX <= -threshold) go(index + 1);
+        else if (dragDX >= threshold) go(index - 1);
+        else apply(true);
+        start();
+      };
+      viewport.addEventListener('touchend', endDrag);
+      viewport.addEventListener('touchcancel', endDrag);
+      slider.addEventListener('mouseenter', () => {
+        clearTimeout(timer);
+        if (progress) progress.classList.add('paused');
+      });
+      slider.addEventListener('mouseleave', () => {
+        if (progress) progress.classList.remove('paused');
+        start();
+      });
+      window.addEventListener('resize', () => apply(false));
+
+      apply(false);
+      start();
+    }
+  </script>
+
+  <script>
+    // "Как начать" accordion — single-open, animated height in px.
+    (() => {
+      const rows = document.querySelectorAll('.start-row');
+
+      const setOpen = (row, open, animate = true) => {
+        const btn = row.querySelector('.start-summary');
+        const wrap = row.querySelector('.start-desc-wrap');
+        if (!btn || !wrap) return;
+
+        if (!animate) wrap.style.transition = 'none';
+
+        if (open) {
+          wrap.style.height = wrap.scrollHeight + 'px';
+          row.classList.add('is-open');
+          btn.setAttribute('aria-expanded', 'true');
+          if (animate) {
+            const onEnd = (e) => {
+              if (e.propertyName !== 'height') return;
+              wrap.style.height = 'auto';
+              wrap.removeEventListener('transitionend', onEnd);
+            };
+            wrap.addEventListener('transitionend', onEnd);
+          } else {
+            wrap.style.height = 'auto';
+          }
+        } else {
+          wrap.style.height = wrap.scrollHeight + 'px';
+          void wrap.offsetHeight;
+          wrap.style.height = '0px';
+          row.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+
+        if (!animate) {
+          void wrap.offsetHeight;
+          wrap.style.transition = '';
+        }
+      };
+
+      // All start closed (no animation on init).
+      rows.forEach(row => setOpen(row, row.classList.contains('is-open'), false));
+
+      rows.forEach(row => {
+        const btn = row.querySelector('.start-summary');
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+          const isOpen = row.classList.contains('is-open');
+          if (isOpen) {
+            setOpen(row, false);
+          } else {
+            // Close every other open row first, then open this one.
+            rows.forEach(other => {
+              if (other !== row && other.classList.contains('is-open')) {
+                setOpen(other, false);
+              }
+            });
+            setOpen(row, true);
+          }
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    // Cost calculator — two co-dependent fields. Devices is the canonical
+    // quantity; price always equals devices × 490 ₽ for the current view
+    // (top toggle = month/year, bottom switch = −10% annual-payment discount).
+    // Editing the price derives a whole device count (rounded by 490 ₽/person,
+    // floored at the 15-device minimum) and snaps the price back to that value.
+    const pricingExamples = document.querySelector('.pricing-examples');
+    if (pricingExamples) {
+      const toggleBtns = pricingExamples.querySelectorAll('.pricing-toggle-btn');
+      const annualSwitch = pricingExamples.querySelector('.pricing-switch-input');
+      const devicesInput = pricingExamples.querySelector('.calc-devices');
+      const priceInput = pricingExamples.querySelector('.calc-price');
+      const priceLabel = pricingExamples.querySelector('.calc-price-label');
+      const MIN_DEVICES = 15;
+      const RATE = 490; // ₽ per device / month
+      const fmt = n => Math.round(n).toLocaleString('ru-RU').replace(/,/g, ' ');
+      const digits = s => parseInt(String(s).replace(/[^\d]/g, ''), 10);
+
+      // Per-device price for the currently selected view (month/year × discount).
+      const rate = () => {
+        const activeBtn = pricingExamples.querySelector('.pricing-toggle-btn.active');
+        const period = activeBtn ? activeBtn.dataset.period : 'month';
+        const discount = annualSwitch && annualSwitch.checked ? 0.9 : 1;
+        if (priceLabel) priceLabel.textContent = period === 'year' ? 'Цена, ₽ / год' : 'Цена, ₽ / мес';
+        return RATE * (period === 'year' ? 12 : 1) * discount;
+      };
+
+      // Devices → price (devices is the source of truth).
+      const renderFromDevices = () => {
+        const n = digits(devicesInput.value);
+        devicesInput.classList.toggle('is-invalid', !Number.isNaN(n) && n < MIN_DEVICES);
+        if (Number.isNaN(n) || n < 1) { rate(); priceInput.value = ''; return; }
+        priceInput.value = fmt(n * rate());
+      };
+
+      // Price → devices (rounded to a whole user, min 15), live while typing.
+      const renderFromPrice = () => {
+        const p = digits(priceInput.value);
+        if (Number.isNaN(p)) { devicesInput.value = ''; return; }
+        const n = Math.max(MIN_DEVICES, Math.round(p / rate()));
+        devicesInput.value = n;
+        devicesInput.classList.remove('is-invalid');
+        priceInput.classList.toggle('is-invalid', p < MIN_DEVICES * rate());
+      };
+
+      // Strip anything that isn't a digit as it's typed/pasted.
+      const onlyDigits = el => { const c = el.value.replace(/\D/g, ''); if (c !== el.value) el.value = c; };
+
+      // Stepper: nudge the device count by ±1, never below the minimum.
+      const stepBy = delta => {
+        let n = digits(devicesInput.value);
+        if (Number.isNaN(n)) n = MIN_DEVICES;
+        devicesInput.value = Math.max(MIN_DEVICES, n + delta);
+        devicesInput.classList.remove('is-invalid');
+        renderFromDevices();
+      };
+
+      toggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          toggleBtns.forEach(b => b.classList.toggle('active', b === btn));
+          renderFromDevices();
+        });
+      });
+      if (annualSwitch) annualSwitch.addEventListener('change', renderFromDevices);
+
+      pricingExamples.querySelectorAll('.calc-step').forEach(btn => {
+        btn.addEventListener('click', () => stepBy(btn.dataset.step === 'up' ? 1 : -1));
+      });
+
+      devicesInput.addEventListener('input', () => { onlyDigits(devicesInput); renderFromDevices(); });
+      devicesInput.addEventListener('blur', () => {
+        const n = digits(devicesInput.value);
+        if (Number.isNaN(n) || n < MIN_DEVICES) devicesInput.value = MIN_DEVICES;
+        devicesInput.classList.remove('is-invalid');
+        renderFromDevices();
+      });
+
+      priceInput.addEventListener('input', () => { onlyDigits(priceInput); renderFromPrice(); });
+      priceInput.addEventListener('blur', () => {
+        // Snap the price to the corrected, rounded-by-490 amount.
+        let n = digits(devicesInput.value);
+        if (Number.isNaN(n) || n < MIN_DEVICES) n = MIN_DEVICES;
+        devicesInput.value = n;
+        priceInput.classList.remove('is-invalid');
+        renderFromDevices();
+      });
+
+      renderFromDevices();
+    }
+  </script>
+
+  <script>
+    // Application modal — open via any "Подключить" CTA, close via backdrop/close button/Esc.
+    (() => {
+      const modal = document.getElementById('application-modal');
+      if (!modal) return;
+      let lastFocus = null;
+
+      const open = () => {
+        lastFocus = document.activeElement;
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        requestAnimationFrame(() => modal.classList.add('is-open'));
+        document.body.classList.add('modal-locked');
+        const firstInput = modal.querySelector('input, textarea, button');
+        if (firstInput) firstInput.focus({ preventScroll: true });
+      };
+
+      const close = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-locked');
+        const onEnd = () => {
+          modal.hidden = true;
+          modal.removeEventListener('transitionend', onEnd);
+          // Reset the form back to its pristine state for the next open.
+          const form = modal.querySelector('.start-form');
+          const success = modal.querySelector('.start-form-success');
+          const btn = modal.querySelector('.start-form-submit');
+          const dialog = modal.querySelector('.modal-dialog');
+          if (form) {
+            form.reset();
+            form.hidden = false;
+            form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+            form.querySelectorAll('.field-error.is-visible').forEach(el => el.classList.remove('is-visible'));
+          }
+          if (btn) btn.classList.remove('is-loading');
+          if (success) success.hidden = true;
+          if (dialog) dialog.classList.remove('is-success');
+        };
+        modal.addEventListener('transitionend', onEnd);
+        if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus({ preventScroll: true });
+      };
+
+      // Bind every CTA whose visible text is "Подключить".
+      document.querySelectorAll('a[href="#cta"]').forEach(el => {
+        if (el.textContent.trim() === 'Подключить') {
+          el.addEventListener('click', (e) => { e.preventDefault(); open(); });
+        }
+      });
+
+      modal.querySelectorAll('[data-modal-close]').forEach(el => {
+        el.addEventListener('click', close);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.hidden) close();
+      });
+    })();
+  </script>
+
+  <script>
+    // Application form — phone mask, email validation, number stepper.
+    (() => {
+      const form = document.querySelector('.start-form');
+      if (!form) return;
+
+      // Phone mask: +7 (XXX) XXX-XX-XX
+      const phone = form.querySelector('input[data-mask="phone"]');
+      if (phone) {
+        const format = (digits) => {
+          let d = digits.replace(/\D/g, '');
+          if (d.startsWith('8')) d = '7' + d.slice(1);
+          if (!d.startsWith('7')) d = '7' + d;
+          d = d.slice(0, 11);
+          const p1 = d.slice(1, 4);
+          const p2 = d.slice(4, 7);
+          const p3 = d.slice(7, 9);
+          const p4 = d.slice(9, 11);
+          let out = '+7';
+          if (p1) out += ' (' + p1;
+          if (p1 && p1.length === 3) out += ')';
+          if (p2) out += ' ' + p2;
+          if (p3) out += '-' + p3;
+          if (p4) out += '-' + p4;
+          return out;
+        };
+        phone.addEventListener('input', () => { phone.value = format(phone.value); });
+        phone.addEventListener('focus', () => { if (!phone.value) phone.value = '+7 ('; });
+        phone.addEventListener('blur', () => { if (phone.value === '+7 (' || phone.value === '+7') phone.value = ''; });
+      }
+
+      // ИНН: digits only, max 10.
+      const inn = form.querySelector('input[data-mask="inn"]');
+      if (inn) {
+        inn.addEventListener('input', () => {
+          inn.value = inn.value.replace(/\D/g, '').slice(0, 10);
+        });
+      }
+
+      // Clamp number inputs to their min on blur AND when stepping/typing below min.
+      form.querySelectorAll('input[type="number"]').forEach(input => {
+        const min = Number(input.min) || 0;
+        const clamp = () => {
+          if (input.value === '') return;
+          const v = Number(input.value);
+          if (v < min) input.value = min;
+        };
+        input.addEventListener('blur', clamp);
+        input.addEventListener('change', clamp);
+      });
+
+      // Links inside checkbox labels must not toggle the checkbox.
+      form.querySelectorAll('.check-link').forEach(a => {
+        a.addEventListener('click', (e) => e.stopPropagation());
+      });
+
+      // Submit button is disabled while no consent checkbox is ticked.
+      const submitBtn = form.querySelector('.start-form-submit');
+      const checkboxes = form.querySelectorAll('.start-form-confirm input[type="checkbox"]');
+      if (submitBtn && checkboxes.length) {
+        const syncSubmit = () => {
+          const anyChecked = Array.from(checkboxes).some(c => c.checked);
+          submitBtn.disabled = !anyChecked;
+        };
+        checkboxes.forEach(c => c.addEventListener('change', syncSubmit));
+        syncSubmit();
+      }
+
+      // Live error toggling for email/phone
+      const showError = (input, on) => {
+        const err = input.parentElement.querySelector('.field-error');
+        if (err) err.classList.toggle('is-visible', on);
+        input.classList.toggle('is-invalid', on);
+      };
+      form.querySelectorAll('.field input, .field textarea').forEach(input => {
+        input.addEventListener('blur', () => {
+          // Don't nag an empty field on blur — only flag a filled-in invalid value.
+          if (!input.value) { showError(input, false); return; }
+          showError(input, !input.checkValidity());
+        });
+        input.addEventListener('input', () => {
+          if (input.classList.contains('is-invalid') && input.checkValidity()) showError(input, false);
+        });
+      });
+
+      // Submit — flag invalid fields, otherwise show a loader then a success state.
+      const success = document.querySelector('.start-form-success');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let valid = true;
+        form.querySelectorAll('.field input, .field textarea').forEach(el => {
+          if (!el.checkValidity()) {
+            valid = false;
+            showError(el, true);
+          }
+        });
+        if (!valid) return;
+
+        // All required fields are valid — simulate sending the request.
+        submitBtn.classList.add('is-loading');
+        setTimeout(() => {
+          submitBtn.classList.remove('is-loading');
+          form.hidden = true;
+          if (success) success.hidden = false;
+          const dialog = form.closest('.modal-dialog');
+          if (dialog) dialog.classList.add('is-success');
+        }, 1500);
+      });
+
+      // Clear invalid flag on text inputs as soon as the user types something valid.
+      form.querySelectorAll('input, textarea').forEach(el => {
+        el.addEventListener('input', () => {
+          if (el.classList.contains('is-invalid') && el.checkValidity()) el.classList.remove('is-invalid');
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    // Topology wires — anchor endpoints to the live geometry of the cards so the
+    // lines always meet the gateway card's left/right edges (without crossing onto it)
+    // and the service-card edges, at any viewport width.
+    (function () {
+      const stage = document.querySelector('.topo-stage');
+      if (!stage) return;
+      const svg = stage.querySelector('.topo-wires');
+      const card = stage.querySelector('.topo-gw-card');
+      const devices = [...stage.querySelectorAll('.topo-device')];
+      const leftPaths = [...stage.querySelectorAll('[data-wire-left] .topo-wire')];
+      const ruPath = stage.querySelector('[data-wire-ru]');
+      const intlPath = stage.querySelector('[data-wire-intl]');
+      const direct = stage.querySelector('.topo-svc-direct');
+      const secured = stage.querySelector('.topo-svc-secured');
+      const sigGroup = stage.querySelector('[data-signals]');
+      if (!card) return;
+
+      function rect(el) {
+        const s = stage.getBoundingClientRect();
+        const r = el.getBoundingClientRect();
+        return {
+          l: r.left - s.left, r: r.right - s.left,
+          cy: (r.top + r.bottom) / 2 - s.top,
+        };
+      }
+      function curve(x1, y1, x2, y2) {
+        const dx = x2 - x1;
+        return `M${x1.toFixed(1)} ${y1.toFixed(1)} C ${(x1 + dx * 0.5).toFixed(1)} ${y1.toFixed(1)}, ${(x2 - dx * 0.5).toFixed(1)} ${y2.toFixed(1)}, ${x2.toFixed(1)} ${y2.toFixed(1)}`;
+      }
+
+      function layout() {
+        const s = stage.getBoundingClientRect();
+        svg.setAttribute('viewBox', `0 0 ${s.width.toFixed(1)} ${s.height.toFixed(1)}`);
+        const c = rect(card);
+        const convX = c.l, convY = c.cy;
+        const originX = c.r, originY = c.cy;
+        devices.forEach((d, i) => {
+          const p = leftPaths[i];
+          if (!p) return;
+          const dr = rect(d);
+          // device → gateway, so a signal animated from the path start runs inward
+          p.setAttribute('d', curve(dr.r, dr.cy, convX, convY));
+        });
+        // Service wires terminate flush to the service cards, at the same heights as
+        // the top device (macbook) and bottom device (+38) so the figure is symmetric.
+        const topY = devices.length ? rect(devices[0]).cy : convY;
+        const botY = devices.length ? rect(devices[devices.length - 1]).cy : convY;
+        if (direct && ruPath) {
+          const t = rect(direct);
+          ruPath.setAttribute('d', curve(originX, originY, t.l, topY));
+        }
+        if (secured && intlPath) {
+          const t = rect(secured);
+          intlPath.setAttribute('d', curve(originX, originY, t.l, botY));
+        }
+        signals.forEach(sig => { try { sig.len = sig.path.getTotalLength(); } catch (e) { sig.len = 0; } });
+      }
+
+      // Build one travelling signal dot per wire. Left wires + the RU wire carry
+      // mint signals; the INTL wire carries a pink one. Each gets its own speed and
+      // phase so the dots don't move in lockstep.
+      const SVGNS = 'http://www.w3.org/2000/svg';
+      const signals = [];
+      function addSignal(path, pink, dur) {
+        if (!path) return;
+        const c = document.createElementNS(SVGNS, 'circle');
+        c.setAttribute('r', '3.6');
+        c.setAttribute('class', 'topo-signal' + (pink ? ' pink' : ''));
+        sigGroup.appendChild(c);
+        signals.push({ path, circle: c, len: 0, dur, phase: Math.random() });
+      }
+      leftPaths.forEach(p => addSignal(p, false, 2000 + Math.random() * 700));
+      addSignal(ruPath, false, 2300);
+      addSignal(intlPath, false, 2300);
+
+      function tick(ts) {
+        for (const sig of signals) {
+          if (!sig.len) { sig.circle.style.opacity = 0; continue; }
+          const t = ((ts / sig.dur) + sig.phase) % 1;
+          const pt = sig.path.getPointAtLength(t * sig.len);
+          sig.circle.setAttribute('cx', pt.x.toFixed(1));
+          sig.circle.setAttribute('cy', pt.y.toFixed(1));
+          // fade in/out near the ends so dots appear to depart and arrive smoothly
+          sig.circle.style.opacity = Math.max(0, Math.min(1, t / 0.12, (1 - t) / 0.12));
+        }
+        requestAnimationFrame(tick);
+      }
+
+      layout();
+      requestAnimationFrame(tick);
+      window.addEventListener('resize', layout);
+      window.addEventListener('load', layout);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+    })();
+  </script>
+
+</body>
+</html>
