@@ -2971,6 +2971,11 @@ section {
   mask-composite: intersect;
 }
 
+/* On mobile the pricing background spans the full screen width (like hero). */
+@media (max-width: 768px) {
+  .pricing-bg img { width: 100%; }
+}
+
 .pricing-bg::after {
   content: '';
   position: absolute;
