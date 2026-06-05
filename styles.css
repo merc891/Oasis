@@ -607,6 +607,18 @@ section {
   .stat-strip { grid-template-columns: 1fr; }
 }
 
+/* Mobile hero spacing. Placed after the base .hero-inner/.stat-band rules so
+   it wins on source order. Don't pin the numbers strip to the viewport bottom
+   on mobile (content fills the screen, so the auto-margin collapsed and the
+   strip stuck to the buttons). Give it an explicit gap clearly larger than the
+   text -> buttons gap (40px), so spacing reads like desktop: more air before
+   the numbers. */
+@media (max-width: 768px) {
+  .hero { min-height: auto; }
+  .hero-inner { padding-bottom: 0; }
+  .stat-band { margin-top: 64px; }
+}
+
 .stat-cell {
   padding: 28px 28px;
   border-right: 1px solid transparent;
